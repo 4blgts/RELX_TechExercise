@@ -11,5 +11,12 @@
   },
   "productDetails": {
     "productName": "Automatic Espresso Machine"
+  },
+  "checkoutDetails": {
+    "Address": "123 Maine Avenue",
+    "City": "Baltimore",
+    "State": "Maryland",
+    "ZipCode": "21207"
+
   }
 }

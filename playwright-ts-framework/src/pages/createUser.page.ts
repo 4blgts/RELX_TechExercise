@@ -1,5 +1,4 @@
 import { Page, Locator } from '@playwright/test';
-import { faker } from '@faker-js/faker';
 
 export default class CreateUserPage{
   constructor(protected page: Page) {
@@ -45,13 +44,6 @@ export default class CreateUserPage{
      async fillEmail(email: string): Promise<void> {
         await this.email.fill(email);
      }
-
-    //  async fillRandomEmail(): Promise<string> {
-    //     const simpleEmail = faker.internet.email();
-    //     await this.email.fill(simpleEmail);
-
-    //     return simpleEmail;
-    //  }
 
      async fillPassword(password: string): Promise<void> {
         await this.password.fill(password);
