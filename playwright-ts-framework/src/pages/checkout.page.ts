@@ -1,9 +1,9 @@
 import { Page, Locator } from '@playwright/test';
 
 export default class CheckoutPage {
-  constructor(protected page: Page) {
-  this.page = page;
-  }
+   constructor(protected page: Page) {
+   this.page = page;
+   }
 
    public get shippingAddressHeader(): Locator {
    return this.page.getByRole('heading', { name: 'Shipping Address'});

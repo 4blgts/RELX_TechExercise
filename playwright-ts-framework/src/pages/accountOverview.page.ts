@@ -1,9 +1,9 @@
 import { Page, Locator } from '@playwright/test';
 
 export default class AccountOverviewPage {
-  constructor(protected page: Page) {
-  this.page = page;
-  }
+    constructor(protected page: Page) {
+    this.page = page;
+    }
 
     private get accountOverview(): Locator {
     return this.page.getByRole('heading', { name: 'Account Overview', exact: true })
@@ -47,10 +47,10 @@ export default class AccountOverviewPage {
 
     async fillEmail(email: string): Promise<void> {
         await this.email.fill(email);
-     }
+    }
 
-     async fillPassword(password: string): Promise<void> {
+    async fillPassword(password: string): Promise<void> {
         await this.password.fill(password);
-     }
+    }
 
 }
