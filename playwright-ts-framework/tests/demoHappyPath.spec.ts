@@ -8,7 +8,7 @@ import ProductsPage from '../src/pages/products.page';
 import ShoppingCartPage from '../src/pages/shoppingCart.page';
 import CheckoutPage from '../src/pages/checkout.page';
 
-test('Happy Path - Create user and check out products', async ({ page }) => {
+test('Happy Path - Create new user and complete product checkout flow', async ({ page }) => {
   
     //Page instantiation
     const basePage = new BasePage(page);
