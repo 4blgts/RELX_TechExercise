@@ -11,4 +11,23 @@ export default class BasePage {
     await locator.waitFor({ state: 'visible' });
     await locator.click();
   }
+
+  private get hamburgerMenu(): Locator {
+    return this.page.getByRole('button', { name: 'Open menu', exact: true })
+    }
+
+  private menuItem(menuItemName: string ): Locator {
+    return this.page.getByRole('link', { name: menuItemName, exact: true })
+    }
+
+  async clickHamburgerMenu(): Promise<void> {
+        await this.hamburgerMenu.waitFor({ state: 'visible' });
+        await this.hamburgerMenu.click();
+     }
+
+  async navigateToMenuItem(menuItemName: string): Promise<void> {
+        await this.clickHamburgerMenu();
+        await this.menuItem(menuItemName).waitFor({ state: 'visible' });
+        await this.menuItem(menuItemName).click();
+  }
 }

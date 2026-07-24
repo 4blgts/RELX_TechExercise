@@ -8,5 +8,8 @@
     "lastName": "Smith",
     "email": "4blgts_jduf2@mailsac.com",
     "password": "demotest6789#"
+  },
+  "productDetails": {
+    "productName": "Automatic Espresso Machine"
   }
 }
