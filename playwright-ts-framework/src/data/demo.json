@@ -2,5 +2,20 @@
   "customerLogin": {
     "username": "4blgts_jduf2@mailsac.com",
     "password": "qwertyuiop"
+  },
+  "productDetails": {
+    "categoryName": "Dormitorio",
+    "productName": "BASIC 1.5PLZ"
+  },
+  "checkoutData": {
+    "checkoutForm": {
+      "fullName": "Juan Santos",
+      "email": "juan.santos@example.com",
+      "phone": "+51900000123",
+      "district": "Bellavita",
+      "addressLine1": "Urbanización San Juan Macías",
+      "addressLine2": "Calle Los Zafiros 432"
+    },
+    "paymentOptionName": "Yape"
   }
 }

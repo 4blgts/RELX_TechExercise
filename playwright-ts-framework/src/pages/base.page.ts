@@ -25,8 +25,12 @@ export default class BasePage {
     }
 
   public get categoriesLink(): Locator {
-    return this.page.getByRole('link', { name: 'Categorías' });
+    return this.page.getByRole('link', { name: 'Categorías' }).first();
     }
+  
+  public get cartLink(): Locator {
+    return this.page.getByRole('link', { name: 'Carrito' }).first();
+  }
 
   async clickMyAccountLink(): Promise<void> {
         await this.myAccountLink.waitFor({ state: 'visible' });
