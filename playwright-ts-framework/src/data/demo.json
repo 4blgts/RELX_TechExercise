@@ -1,22 +1,6 @@
 {
   "customerLogin": {
     "username": "4blgts_jduf2@mailsac.com",
-    "password": "demotest6789#"
-  },
-  "newUserDetails": {
-    "firstName": "Chris",
-    "lastName": "Smith",
-    "email": "4blgts_jduf2@mailsac.com",
-    "password": "demotest6789#"
-  },
-  "productDetails": {
-    "productName": "Automatic Espresso Machine"
-  },
-  "checkoutDetails": {
-    "Address": "123 Maine Avenue",
-    "City": "Baltimore",
-    "State": "Maryland",
-    "ZipCode": "21207"
-
+    "password": "qwertyuiop"
   }
 }
