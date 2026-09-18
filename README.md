@@ -1,6 +1,6 @@
 # TypeScript Playwright Framework
 
-This repository contains a sample Playwright automation framework written in TypeScript. It demonstrates a complete end-to-end happy path for creating a user, signing in, adding a product to the cart, and completing checkout against the SpreeCommerce demo storefront.
+This repository contains a sample Playwright automation framework written in TypeScript.
 
 ## What this project includes
 
@@ -68,6 +68,6 @@ npx playwright show-report
 
 The framework uses the following base URL by default:
 
-- https://demo.spreecommerce.org/
+- 
 
 You can override it by setting the BASE_URL environment variable.
