@@ -28,7 +28,15 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: process.env.BASE_URL || 'https://demo.spreecommerce.org/',
+    baseURL: process.env.BASE_URL || '',
+
+    // API requests will get this headers
+    extraHTTPHeaders: {
+      'Accept': 'application/json',
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+
+    
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

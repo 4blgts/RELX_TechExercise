@@ -1,14 +1,15 @@
 import { test, expect } from '@playwright/test';
 import BasePage from '../src/pages/base.page';
 import testData from '../src/data/demo.json';
+import SearchResultsPage from '../src/pages/searchResults.page';
 
-
-test('[TS002] Validation of Search Flights Functionality ', async ({ page, context }) => {
-  
+test('[TS002] Validation of Search Flights Functionality ', async ({ page, context }) => { 
+    
     //Page instantiation
     const pagePromise = context.waitForEvent('page');
     const basePage = new BasePage(page);
-
+    const searchResultsPage = new SearchResultsPage(page);
+    
     await test.step('Navigate to base URL', async () => {
         await page.goto(process.env.BASE_URL!);
     });
@@ -34,7 +35,8 @@ test('[TS003] Negative Tests Validation of Search Flights Functionality', async 
     //Page instantiation
     const pagePromise = context.waitForEvent('page');
     const basePage = new BasePage(page);
-
+    const searchResultsPage = new SearchResultsPage(page);
+    
     await test.step('Navigate to base URL', async () => {
         await page.goto(process.env.BASE_URL!);
     });
@@ -74,11 +76,12 @@ test('[TS003] Negative Tests Validation of Search Flights Functionality', async 
 })
 
 test('[TS004] Validation of Search Flights Results', async ({ page, context }) => {
-  
+
     //Page instantiation
     const pagePromise = context.waitForEvent('page');
     const basePage = new BasePage(page);
-
+    const searchResultsPage = new SearchResultsPage(page);
+    
     await test.step('Navigate to base URL', async () => {
         await page.goto(process.env.BASE_URL!);
     });
@@ -99,6 +102,10 @@ test('[TS004] Validation of Search Flights Results', async ({ page, context }) =
     });
 
     await test.step('Validate if the search results contents were displayed correctly', async () => {
-        // Add assertions to validate the search results
+        // Validate if correct origin and destination were searched
+        await searchResultsPage.validateSearchedRoute(testData.FlightSearch.origin, testData.FlightSearch.destination);
+    
+        // Validate if quick filters are visible and enabled
+        await searchResultsPage.validateQuickFilterButtons();
     });
 });
