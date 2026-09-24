@@ -1,6 +1,15 @@
 {
-  "customerLogin": {
-    "username": "4blgts_jduf2@mailsac.com",
-    "password": "qwertyuiop"
+  "FlightSearch": {
+    "origin": "SYD",
+    "destination": "SIN",
+    "departureDate": "October 15 2026",
+    "returnDate": "October 30 2026"
+  },
+  "FlightSearchNegative": {
+    "origin": "SYD",
+    "originNegative": "1234",
+    "destination": "SIN",
+    "departureDate": "October 15 2026",
+    "returnDate": "October 30 2026"
   }
 }
